@@ -8,13 +8,24 @@ public class WebAssetBundleLoader : MonoBehaviour
 {
     [SerializeField] GameObject errorScreen;
 
-    [SerializeField] TextAsset jsonFile;
     [SerializeField] WebLoaderData webLoaderData;
+    [SerializeField] TextAsset jsonFile;
 
     void Start()
     {
+        StartCoroutine(DownloadJson());
+        //JsonUtility.FromJsonOverwrite(jsonFile.text, webLoaderData);
         StartCoroutine(DownloadAndCache());
-        JsonUtility.FromJsonOverwrite(jsonFile.text, webLoaderData);
+    }
+
+    IEnumerator DownloadJson()
+    {
+        using (WWW www = new WWW("https://www.dropbox.com/s/0270zqsjrh6xjw5/jsonData.txt?dl=1"))
+        {
+            yield return www;
+            //File.WriteAllText(AssetDatabase.GetAssetPath(jsonFile), www.text);
+            JsonUtility.FromJsonOverwrite(www.text, webLoaderData);
+        }
     }
 
     IEnumerator DownloadAndCache()
@@ -33,13 +44,9 @@ public class WebAssetBundleLoader : MonoBehaviour
             GameObject[] asset = bundle.LoadAllAssets<GameObject>();
             for (int i = 0; i < asset.Length; i++) Instantiate(asset[i]);
 
-            webLoaderData.version = Caching.GetVersionFromCache(webLoaderData.bundleURL);
             bundle.Unload(false);
-
-
         }
 
-        File.WriteAllText(AssetDatabase.GetAssetPath(jsonFile), JsonUtility.ToJson(webLoaderData));
     }
 
 }

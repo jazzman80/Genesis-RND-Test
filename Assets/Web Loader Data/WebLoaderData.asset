@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d8bbf46a42770b04b9e17e3da88d2c76, type: 3}
   m_Name: WebLoaderData
   m_EditorClassIdentifier: 
-  bundleURL: D:/Server/testbundle
-  version: -1
+  bundleURL: https://www.dropbox.com/s/5d4knpvt01bm9vs/testbundle?dl=1
+  version: 0

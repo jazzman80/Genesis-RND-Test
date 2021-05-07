@@ -16,15 +16,14 @@ public class SpawnManager : MonoBehaviour
             GameObject coin = Instantiate(coinPrefab);
             coin.SetActive(false);
             coinPool.Add(coin);
-            //coin.transform.position = RandomPosition();
-            //coin.GetComponent<Coin>().CoinActivation();
         }
 
-        InvokeRepeating("InstantiateCoin", 1.0f, 0.1f);
+        StartCoroutine(InstantiateCoin());
     }
 
-    private void InstantiateCoin()
+    private IEnumerator InstantiateCoin()
     {
+        yield return new WaitForSeconds(0.1f);
         for(int i = 0; i < coinsCount; i++)
         {
             if (!coinPool[i].activeSelf)
@@ -35,6 +34,7 @@ public class SpawnManager : MonoBehaviour
                 break;
             }
         }
+        StartCoroutine(InstantiateCoin());
     }
 
     private Vector3 RandomPosition()

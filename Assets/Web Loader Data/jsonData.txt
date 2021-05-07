@@ -1,1 +1,1 @@
-{"bundleURL":"http://Server/bundle","version":0}
+{"bundleURL":"https://www.dropbox.com/s/5d4knpvt01bm9vs/testbundle?dl=1","version":0}

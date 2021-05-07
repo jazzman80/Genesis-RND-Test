@@ -9,7 +9,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{6579D1C5-3B5B-B154-9624-9B6D82F1DDCF}</ProjectGuid>
+    <ProjectGuid>{29C756DD-CFDF-E5FA-8583-EC91BE59A0CE}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>Assembly-CSharp</AssemblyName>
@@ -64,18 +64,17 @@
     <Compile Include="Assets\Scripts\UIManager.cs" />
     <Compile Include="Assets\Scripts\Player.cs" />
     <Compile Include="Assets\Game Events\Scripts\GameEventListener.cs" />
-    <Compile Include="Assets\Scripts\Target.cs" />
     <Compile Include="Assets\Scripts\LoadingLabel.cs" />
     <Compile Include="Assets\Game Settings\GameSettings.cs" />
     <Compile Include="Assets\Scripts\MenuFadeFx.cs" />
     <Compile Include="Assets\Scripts\BlockButton.cs" />
     <Compile Include="Assets\Scripts\MainScreen.cs" />
     <Compile Include="Assets\Scripts\CameraFollow.cs" />
+    <Compile Include="Assets\Scripts\WebAssetBundleLoader.cs" />
+    <Compile Include="Assets\Web Loader Data\WebLoaderData.cs" />
     <Compile Include="Assets\Scripts\BudledObjectLoader.cs" />
     <Compile Include="Assets\Scripts\SettingsScreen.cs" />
     <Compile Include="Assets\Scripts\SoundManager.cs" />
-    <Compile Include="Assets\Scripts\WebAssetBundleLoader.cs" />
-    <Compile Include="Assets\Web Loader Data\WebLoaderData.cs" />
   </ItemGroup>
   <ItemGroup>
      <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
@@ -725,19 +724,19 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="FMODUnityResonanceEditor.csproj">
-      <Project>{CFF1D45C-F1C7-8F39-42C7-8EBFC4A09224}</Project>
+      <Project>{3987105A-3551-A0EA-38AF-00F185E522A3}</Project>
       <Name>FMODUnityResonanceEditor</Name>
     </ProjectReference>
     <ProjectReference Include="FMODUnity.csproj">
-      <Project>{21D7FFEF-989D-3647-CC1B-3C11313735BC}</Project>
+      <Project>{761CE784-90A2-7A20-BD36-DD36271E4F2A}</Project>
       <Name>FMODUnity</Name>
     </ProjectReference>
     <ProjectReference Include="FMODUnityEditor.csproj">
-      <Project>{165C5CAB-C710-C076-4159-D4B026479096}</Project>
+      <Project>{5DCBE6A4-4BCD-4A19-468F-998CC86770B7}</Project>
       <Name>FMODUnityEditor</Name>
     </ProjectReference>
     <ProjectReference Include="FMODUnityResonance.csproj">
-      <Project>{A89826DC-86D4-41B6-129E-147D16C8AD42}</Project>
+      <Project>{DEB19E0B-1E73-4537-4E21-32A83D92D931}</Project>
       <Name>FMODUnityResonance</Name>
     </ProjectReference>
   </ItemGroup>

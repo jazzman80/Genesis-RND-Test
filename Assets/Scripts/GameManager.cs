@@ -28,12 +28,6 @@ public class GameManager : MonoBehaviour
         StartCoroutine(LoadingScene("Start Scene"));
     }
 
-    private IEnumerator LoadingMainScene()
-    {
-        yield return new WaitForSeconds(1.0f);
-        SceneManager.LoadScene("Main Scene");
-    }
-
     private IEnumerator LoadingScene(string sceneName)
     {
         fadeFx.SetActive(true);

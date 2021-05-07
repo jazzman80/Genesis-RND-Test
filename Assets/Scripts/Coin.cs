@@ -11,11 +11,12 @@ public class Coin : MonoBehaviour
     
     public void CoinActivation()
     {
-        Invoke("CoinLife", 5.0f);
+        StartCoroutine(CoinLife());
     }
 
-    private void CoinLife()
+    private IEnumerator CoinLife()
     {
+        yield return new WaitForSeconds(5.0f);
         gameObject.SetActive(false);
     }
 
@@ -27,12 +28,13 @@ public class Coin : MonoBehaviour
             scoreEvent.Raise();
             coinMesh.SetActive(false);
             gameObject.GetComponent<BoxCollider>().enabled = false;
-            Invoke("DelayedDeath", 5.0f);
+            StartCoroutine(DelayedDeath());
         }
     }
 
-    private void DelayedDeath()
+    private IEnumerator DelayedDeath()
     {
+        yield return new WaitForSeconds(5.0f);
         gameObject.GetComponent<BoxCollider>().enabled = true;
         coinMesh.SetActive(true);
         gameObject.SetActive(false);

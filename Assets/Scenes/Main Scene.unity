@@ -612,11 +612,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   errorScreen: {fileID: 2085554361}
-  jsonFile: {fileID: 4900000, guid: e56b417b93f8432458650e8d86b76875, type: 3}
   webLoaderData: {fileID: 11400000, guid: a72a03fd16e290f4bbd38c05963f2cfd, type: 2}
-  BundleURL: 
-  AssetName: 
-  version: 0
+  jsonFile: {fileID: 4900000, guid: e56b417b93f8432458650e8d86b76875, type: 3}
 --- !u!4 &1623158904
 Transform:
   m_ObjectHideFlags: 0
